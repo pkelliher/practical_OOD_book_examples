@@ -1,5 +1,5 @@
 class Gear
-    attr_reader :rainring, :cog
+    attr_reader :chainring, :cog
     def initialize(chainring: cog:)
         @chainring = chainring
         @cog = cog
@@ -10,12 +10,12 @@ class Gear
     end
 
     def ratio
-        chainring / cog to_f
+        chainring / cog.to_f
     end
 end
 
 class Wheel
-    attr_reader :rim, :tire, :Gear
+    attr_reader :rim, :tire, :gear
     def initialize(rim:, tire:, chainring:, cog:)
         @rim = rim
         @tire = tire
