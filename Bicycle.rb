@@ -53,6 +53,7 @@ class MountainBike < Bicycle
         @front_shock = opts[:front_shock]
         @rear_shock = opts[:rear_shock]
     end
+
     def local_spares
         { front_shock: front_shock}
     end
@@ -72,10 +73,10 @@ puts road_bike.chain
 puts road_bike.spares
 
 mountain_bike =
-MountainBike.new(
-    size: 'S'
-    front_shock: 'Manitou'
-    rear_shock: 'Fox')
+    MountainBike.new(
+        size: 'S'
+        front_shock: 'Manitou'
+        rear_shock: 'Fox')
 
 puts mountain_bike.tire_size
 puts mountain_bike.chain
